@@ -1,0 +1,17 @@
+# files
+.DS_Store
+Thumbs.db
+db.json
+
+# logs
+*.log
+
+# dependencies
+node_modules
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+docs
