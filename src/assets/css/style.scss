@@ -9,92 +9,32 @@
 @import "~shitajicss/src/scss/_shitaji.scss";
 @import "~musubii/src/scss/config/_variable.scss";
 @import "~musubii/src/scss/base/_global.scss";
-@import "~musubii/src/scss/layout/_section.scss";
-@import "~musubii/src/scss/layout/_grid.scss";
-@import "~musubii/src/scss/layout/_space.scss";
-@import "~musubii/src/scss/module/_heading.scss";
-@import "~musubii/src/scss/module/_text.scss";
-@import "~musubii/src/scss/module/_button.scss";
-@import "~musubii/src/scss/module/_list.scss";
-@import "~musubii/src/scss/module/_table.scss";
-@import "~musubii/src/scss/module/_form.scss";
-@import "~musubii/src/scss/module/_icon.scss";
-@import "~musubii/src/scss/module/_alert.scss";
-@import "~musubii/src/scss/module/_wysiwyg.scss";
-@import "~musubii/src/scss/utility/_size.scss";
-@import "~musubii/src/scss/utility/_flex.scss";
-@import "~musubii/src/scss/utility/_deco.scss";
-@import "~musubii/src/scss/utility/_display.scss";
-@import "~musubii/src/scss/utility/_clearfix.scss";
+//@import "~musubii/src/scss/layout/_section.scss";
+//@import "~musubii/src/scss/layout/_grid.scss";
+//@import "~musubii/src/scss/layout/_space.scss";
+//@import "~musubii/src/scss/module/_heading.scss";
+//@import "~musubii/src/scss/module/_text.scss";
+//@import "~musubii/src/scss/module/_button.scss";
+//@import "~musubii/src/scss/module/_list.scss";
+//@import "~musubii/src/scss/module/_table.scss";
+//@import "~musubii/src/scss/module/_form.scss";
+//@import "~musubii/src/scss/module/_icon.scss";
+//@import "~musubii/src/scss/module/_alert.scss";
+//@import "~musubii/src/scss/module/_wysiwyg.scss";
+//@import "~musubii/src/scss/utility/_size.scss";
+//@import "~musubii/src/scss/utility/_flex.scss";
+//@import "~musubii/src/scss/utility/_deco.scss";
+//@import "~musubii/src/scss/utility/_display.scss";
+//@import "~musubii/src/scss/utility/_clearfix.scss";
 
 //----------------------------------------------------
-// / Content
+// / Global
 //----------------------------------------------------
 
-.content.is-width-min {
-  @include tablet {
-    max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  @include desktop {
-    max-width: 720px;
-  }
-  @include wide {
-    max-width: 720px;
-  }
-}
-
-//----------------------------------------------------
-// / Grid
-//----------------------------------------------------
-
-@each $gap-x in 2, 3, 4, 6 {
-  .grid.is-gap-#{$gap-x}x:not(.is-gap-none) {
-    margin-left: $gap-x / -2 + em;
-    margin-bottom: $gap-x / -2 + em;
-    > .col {
-      padding-left: $gap-x / 2 + em;
-      padding-bottom: $gap-x / 2 + em;
-    }
-    + .grid.is-gap-#{$gap-x}x:not(.is-gap-none) {
-      margin-top: $gap-x / 2 + em;
-    }
-  }
-}
-
-//----------------------------------------------------
-// / Space
-//----------------------------------------------------
-
-@each $space-x in 2, 3, 4, 5, 6 {
-  .is-space-#{$space-x}x {
-    > *:not(:first-child) {
-      margin-top: $space-x + em;
-    }
-  }
-}
-
-//----------------------------------------------------
-// / Img
-//----------------------------------------------------
-
-.img {
-  display: block;
-  &.is-radius {
-    border-radius: 0.25em;
-  }
-  &.is-floating {
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
-    @include tablet {
-      box-shadow: 0 2px 36px rgba(0, 0, 0, 0.25);
-    }
-  }
-}
-
-.box.is-note {
-  padding: 1em 1.25em;
-  background-color: $grey-100;
-  border: 1px solid $grey-300;
-  border-radius: 2px;
+body {
+  background-color: $pjcolor-brown-01;
+  background-image: url("/cover.svg");
+  background-position: center center;
+  background-size: cover;
+  color: $light;
 }

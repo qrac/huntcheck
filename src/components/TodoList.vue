@@ -1,10 +1,11 @@
 <template lang="pug">
-div
-  ul
+.todo-box
+  ul.todo-list
     TodoItem(v-for="item in items" :key="item.label" :item="item" @remove="remove(item)")
-  form(@submit.prevent)
-    input(type="text" v-model="newItemLabel" title="Add a new item")
-    button(@click="add") Add
+  form.todo-form(@submit.prevent)
+    .todo-add
+      input(type="text" v-model="newItemLabel" placeholder="Add a new item")
+      button(@click="add") +
 </template>
 
 <script>
@@ -37,3 +38,54 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.todo-box {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid $light-5;
+  border-bottom: 1px solid $light-5;
+}
+
+.todo-add {
+  position: relative;
+  display: flex;
+  padding-left: 2.5em;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 1.25em;
+    width: 1em;
+    height: 2px;
+    background-color: $grey-700;
+  }
+  &:before {
+    transform: translateX(-50%);
+  }
+  &:after {
+    transform: translateX(-50%) rotate(90deg);
+  }
+  > input {
+    flex: 1 0 0%;
+    max-width: 100%;
+    height: calc(3em + (1px * 2));
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: 0;
+    color: $light;
+    line-height: 3em;
+    @include placeholder {
+      color: $light-6;
+    }
+  }
+  > button {
+    display: none;
+  }
+}
+</style>
+

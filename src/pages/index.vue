@@ -1,6 +1,5 @@
 <template lang="pug">
-main
-  h1 Hunt Check
+main.main
   TodoList
 </template>
 
@@ -13,3 +12,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.main {
+  padding: 0 0.75em;
+}
+</style>

@@ -10,8 +10,8 @@ module.exports = {
   ],
   css: ["~/assets/css/style.scss"],
   head: {
-    title: "Hunt Check",
-    titleTemplate: "%s - Hunt Check",
+    title: "ハンティングチェックリスト",
+    titleTemplate: "Hunt Check - %s",
     htmlAttrs: {
       lang: "ja",
       prefix: "og: http://ogp.me/ns#"
@@ -59,6 +59,10 @@ module.exports = {
       { property: "og:locale", content: "ja_JP" }
     ],
     link: [
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Oswald"
+      },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       { rel: "icon", type: "image/x-icon", href: "/favicon.png" }
     ]
