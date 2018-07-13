@@ -1,12 +1,11 @@
-<template>
-  <main>
-    <h1>Hunt Check</h1>
-    <TodoList/>
-  </main>
+<template lang="pug">
+main
+  h1 Hunt Check
+  TodoList
 </template>
 
 <script>
-import TodoList from '~/components/TodoList.vue'
+import TodoList from "~/components/TodoList.vue"
 
 export default {
   components: {
