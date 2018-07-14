@@ -78,7 +78,7 @@ module.exports = {
     link: [
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Oswald"
+        href: "https://fonts.googleapis.com/css?family=Slackey"
       },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       { rel: "icon", type: "image/x-icon", href: "/favicon.png" }

@@ -19,10 +19,11 @@
 
 .heading.is-title {
   color: #cec8c8;
-  font-size: 150%;
-  font-family: Oswald, sans-serif;
+  font-size: 175%;
+  font-family: Slackey, sans-serif;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .footer {
