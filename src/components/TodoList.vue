@@ -4,8 +4,8 @@
     TodoItem(v-for="item in items" :key="item.label" :item="item" @remove="remove(item)" @check="check(item)")
   form.todo-form(@submit.prevent)
     .todo-add
-      input(type="text" v-model="newItemLabel" placeholder="Add a new item")
-      button(@click="add") +
+      input(type="text" v-model="newItemLabel" placeholder="Write a new item")
+      button.btn.is-ghost.is-primary.is-sm(@click="add") Add
 </template>
 
 <script>
@@ -55,6 +55,7 @@ export default {
 .todo-add {
   position: relative;
   display: flex;
+  align-items: center;
   padding-left: 2.5em;
   &:before,
   &:after {
@@ -83,13 +84,13 @@ export default {
     outline: 0;
     color: $light;
     font-weight: 600;
-    line-height: 3em;
+    //line-height: 3em;
     @include placeholder {
       color: $light-6;
     }
   }
-  > button {
-    display: none;
+  > .btn {
+    align-self: auto;
   }
 }
 </style>

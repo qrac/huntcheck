@@ -116,6 +116,7 @@ export default {
 .btn.is-delete {
   cursor: pointer;
   position: relative;
+  align-self: auto;
   width: 2.5em;
   height: 2.5em;
   background-color: transparent;
