@@ -19,6 +19,23 @@ export default {
 
 <style lang="scss" scoped>
 .app {
-  min-height: 100vh;
+  position: relative;
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $pjcolor-brown-01;
+    background-image: url("/cover.svg");
+    background-position: center center;
+    background-size: cover;
+    z-index: 1;
+  }
 }
 </style>
