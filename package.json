@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.0.2",
+    "@nuxtjs/pwa": "^2.0.8",
     "moftone": "^6.2.0",
     "musubii": "^6.2.0",
     "nuxt": "npm:nuxt-edge",

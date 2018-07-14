@@ -5,9 +5,26 @@ module.exports = {
   },*/
   srcDir: "src/",
   modules: [
+    "@nuxtjs/pwa",
     ["@nuxtjs/google-analytics", { id: "UA-40305123-20" }],
     ["nuxt-sass-resources-loader", ["./src/assets/css/_variable.scss"]]
   ],
+  manifest: {
+    lang: "ja",
+    name: "Hunt Check",
+    short_name: "Hunt Check",
+    start_url: "/",
+    background_color: "#160b0a",
+    theme_color: "#C96D18",
+    display: "standalone",
+    icons: [
+      {
+        sizes: "512x512",
+        src: "/apple-touch-icon.png",
+        type: "image/png"
+      }
+    ]
+  },
   css: ["~/assets/css/style.scss"],
   head: {
     title: "ハンティングチェックリスト",
