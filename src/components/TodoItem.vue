@@ -32,7 +32,7 @@ export default {
       left: -2.25em;
       width: 1.5em;
       height: 1.5em;
-      background-color: $pjcolor-green-01;
+      background-color: saturate($pjcolor-green-01, 0%);
       //border: 0.5em solid rgba($pjcolor-green-01, 0.8);
       border-radius: 0.75em;
       filter: blur(4px);
@@ -53,13 +53,15 @@ export default {
       height: 100%;
       background-image: linear-gradient(
         to top,
-        rgba($pjcolor-green-01, 0.8) 0%,
-        rgba($pjcolor-green-01, 0.2) 30%,
-        rgba($pjcolor-green-01, 0.05) 50%,
-        rgba($pjcolor-green-01, 0.2) 70%,
-        rgba($pjcolor-green-01, 0.8) 100%
+        rgba($pjcolor-green-01, 0.5) 0%,
+        rgba($pjcolor-green-01, 0.15) 30%,
+        rgba($pjcolor-green-01, 0.1) 50%,
+        rgba($pjcolor-green-01, 0.15) 70%,
+        rgba($pjcolor-green-01, 0.5) 100%
       );
-      filter: blur(3px);
+      border-top: 3px solid $pjcolor-green-01;
+      border-bottom: 3px solid $pjcolor-green-01;
+      filter: blur(2px);
       opacity: 0;
       z-index: 1;
       transition: ease-in 0.18s;
@@ -94,6 +96,12 @@ export default {
   }
   > input {
     display: none;
+  }
+  > .text {
+    font-weight: 600;
+    text-shadow: $black 1px 1px 0, $black -1px -1px 0, $black -1px 1px 0,
+      $black 1px -1px 0, $black 0px 1px 0, $black 0-1px 0, $black -1px 0 0,
+      $black 1px 0 0;
   }
 }
 

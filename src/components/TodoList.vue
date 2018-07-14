@@ -81,6 +81,7 @@ export default {
     border-radius: 0;
     outline: 0;
     color: $light;
+    font-weight: 600;
     line-height: 3em;
     @include placeholder {
       color: $light-6;
