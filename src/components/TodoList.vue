@@ -1,7 +1,7 @@
 <template lang="pug">
 .todo-box
   ul.todo-list
-    TodoItem(v-for="item in items" :key="item.label" :item="item" @remove="remove(item)")
+    TodoItem(v-for="item in items" :key="item.label" :item="item" @remove="remove(item)" @check="check(item)")
   form.todo-form(@submit.prevent)
     .todo-add
       input(type="text" v-model="newItemLabel" placeholder="Add a new item")
@@ -23,16 +23,19 @@ export default {
     }
   },
   methods: {
+    save(){
+      store.set(STORE_KEY, this.items);
+    },
     add(){
       this.items.push({ label: this.newItemLabel, done: false })
       this.newItemLabel = "";
       this.save();
     },
-    save(){
-      store.set(STORE_KEY, this.items);
-    },
     remove(item){
       this.items.splice(this.items.indexOf(item), 1);
+      this.save();
+    },
+    check(item){
       this.save();
     }
   }

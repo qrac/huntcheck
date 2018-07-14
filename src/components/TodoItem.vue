@@ -1,7 +1,7 @@
 <template lang="pug">
 li.todo-list-item
   label.label(:style="labelStyle")
-    input.input(type="checkbox" v-model="item.done")
+    input.input(type="checkbox" v-model="item.done" @change="$emit('check')")
     span.text {{item.label}}
   button.btn.is-melt.is-danger(@click="$emit('remove')") x
 </template>
