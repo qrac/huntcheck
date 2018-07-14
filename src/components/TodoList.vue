@@ -47,8 +47,9 @@ export default {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  border-top: 1px solid $light-5;
-  border-bottom: 1px solid $light-5;
+  background-color: rgba($pjcolor-brown-01, 0.75);
+  border-top: 4px double $light-5;
+  border-bottom: 4px double $light-5;
 }
 
 .todo-add {
