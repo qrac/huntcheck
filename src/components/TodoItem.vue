@@ -1,6 +1,6 @@
 <template lang="pug">
-li.todo-list-item
-  label.item-label(:class="labelStyle")
+li.todo-list-item(:class="checkStyle")
+  label.item-label(:class="checkStyle")
     input(type="checkbox" v-model="item.done" @change="$emit('check')")
     span.text {{item.label}}
   button.btn.is-delete(@click="$emit('remove')") x
@@ -10,7 +10,7 @@ li.todo-list-item
 export default {
   props: [ "item" ],
   computed: {
-    labelStyle(){
+    checkStyle(){
       return this.item.done ? { "is-checked": "checked"} : {}
     }
   }
@@ -24,6 +24,9 @@ export default {
   align-items: center;
   padding-left: 2.5em;
   border-bottom: 1px dashed $light-5;
+  &.is-checked {
+    background-color: rgba($grey-200, 0.05);
+  }
   @include desktop {
     &:before {
       content: "";
