@@ -1,6 +1,8 @@
 <template lang="pug">
 header.header
-  h1.title Hunt Check
+  h1.title
+    nuxt-link(to="/" aria-label="home")
+      span Hunt Check
   p.version v1.0.0
 </template>
 
