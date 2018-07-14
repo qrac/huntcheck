@@ -27,8 +27,7 @@ module.exports = {
   },
   css: ["~/assets/css/style.scss"],
   head: {
-    title: "ハンティングチェックリスト",
-    titleTemplate: "Hunt Check - %s",
+    title: "Hunt Check",
     htmlAttrs: {
       lang: "ja",
       prefix: "og: http://ogp.me/ns#"
@@ -42,7 +41,8 @@ module.exports = {
       },
       {
         name: "description",
-        content: "Checklist for hunters",
+        content:
+          "モンスターハンターワールドの素材・タスクメモなどに使うチェックリストWebアプリ",
         hid: "description"
       },
       {
@@ -58,7 +58,8 @@ module.exports = {
       },
       {
         property: "og:description",
-        content: "Checklist for hunters",
+        content:
+          "モンスターハンターワールドの素材・タスクメモなどに使うチェックリストWebアプリ",
         hid: "ogDesc"
       },
       {
