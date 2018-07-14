@@ -19,10 +19,55 @@ export default {
 
 <style lang="scss" scoped>
 .todo-list-item {
+  position: relative;
   display: flex;
   align-items: center;
   padding-left: 2.5em;
   border-bottom: 1px dashed $light-5;
+  @include desktop {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -2.25em;
+      width: 1.5em;
+      height: 1.5em;
+      background-color: $pjcolor-green-01;
+      //border: 0.5em solid rgba($pjcolor-green-01, 0.8);
+      border-radius: 0.75em;
+      filter: blur(4px);
+      opacity: 0;
+      z-index: 1;
+      transform: translateY(-50%);
+      transition: ease-in 0.4s;
+    }
+    &:hover:before {
+      opacity: 1;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to top,
+        rgba($pjcolor-green-01, 0.8) 0%,
+        rgba($pjcolor-green-01, 0.2) 30%,
+        rgba($pjcolor-green-01, 0.05) 50%,
+        rgba($pjcolor-green-01, 0.2) 70%,
+        rgba($pjcolor-green-01, 0.8) 100%
+      );
+      filter: blur(3px);
+      opacity: 0;
+      z-index: 1;
+      transition: ease-in 0.18s;
+    }
+    &:hover:after {
+      opacity: 1;
+    }
+  }
 }
 
 .item-label {
@@ -33,6 +78,7 @@ export default {
   flex: 1 0 0%;
   min-height: 3em;
   padding: 0.75em 0;
+  z-index: 2;
   //transition: ease-in 0.12s;
   &:before {
     content: "";
@@ -67,6 +113,7 @@ export default {
   background-color: transparent;
   border: none;
   color: transparent;
+  z-index: 2;
   &:before,
   &:after {
     content: "";
