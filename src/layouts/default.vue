@@ -1,32 +1,24 @@
 <template lang="pug">
 .app
-  header.header
-    h1.heading.is-title Hunt Check
+  AppHeader
   nuxt
-  footer.footer
+  AppFooter
 </template>
+
+<script>
+import AppHeader from '~/components/AppHeader.vue'
+import AppFooter from '~/components/AppFooter.vue'
+
+export default {
+  components: {
+    AppHeader,
+    AppFooter
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .app {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
-}
-
-.header {
-  padding: 1.5em 0;
-}
-
-.heading.is-title {
-  color: #cec8c8;
-  font-size: 175%;
-  font-family: Slackey, sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.footer {
-  padding: 1.5em 0;
 }
 </style>
