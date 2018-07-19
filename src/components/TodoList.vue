@@ -32,7 +32,10 @@ export default {
   },
   methods: {
     add(){
-      this.items.push({ label: this.newItemLabel, done: false });
+      this.items.push({
+        label: this.newItemLabel,
+        done: false
+      });
       this.newItemLabel = "";
       this.save();
     },
@@ -48,6 +51,7 @@ export default {
     },
     onEnd: function(evt) {
       console.log(evt);
+      this.save();
     }
   }
 }
