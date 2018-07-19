@@ -3,7 +3,7 @@ li.todo-list-item(v-bind:class="checkStyle")
   label.item-label(v-bind:class="checkStyle")
     input(type="checkbox" v-model="item.done" v-on:change="$emit('check')")
     span.text {{item.label}}
-  button.btn.is-delete(@click="$emit('remove')") x
+  button.btn.is-delete(v-on:click="$emit('remove')") x
 </template>
 
 <script>

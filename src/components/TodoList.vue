@@ -2,10 +2,10 @@
 .todo-box
   draggable.todo-list(element="ul" v-bind:options="draggableOption" v-on:end="onEnd")
     TodoItem(v-for="item in items" v-bind:key="item.label" v-bind:item="item" v-on:remove="remove(item)" v-on:check="check(item)")
-  form.todo-form(@submit.prevent)
+  form.todo-form(v-on:submit.prevent)
     .todo-add
       input(type="text" v-model="newItemLabel" placeholder="Write a new item")
-      button.btn.is-ghost.is-primary.is-sm(@click="add") Add
+      button.btn.is-ghost.is-primary.is-sm(v-on:click="add") Add
 </template>
 
 <script>
