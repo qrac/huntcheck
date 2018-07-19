@@ -47,6 +47,7 @@ export default {
       store.set(STORE_KEY, this.items);
     },
     move(){
+      this.save();
     }
   }
 }
