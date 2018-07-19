@@ -51,7 +51,9 @@ export default {
     },
     onEnd: function(evt) {
       console.log(evt);
-      this.save();
+      store.each(function(value, key) {
+          console.log(key, '==', value)
+      })
     }
   }
 }
