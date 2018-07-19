@@ -1,6 +1,6 @@
 <template lang="pug">
 .todo-box
-  draggable.todo-list(element="ul" :options="draggableOption" @end="move")
+  draggable.todo-list(element="ul" :options="draggableOption" @end="onEnd")
     TodoItem(v-for="item in items" :key="item.label" :item="item" @remove="remove(item)" @check="check(item)")
   form.todo-form(@submit.prevent)
     .todo-add
@@ -46,8 +46,8 @@ export default {
     save(){
       store.set(STORE_KEY, this.items);
     },
-    move(){
-      this.save();
+    onEnd: function(evt) {
+      console.log(evt);
     }
   }
 }
