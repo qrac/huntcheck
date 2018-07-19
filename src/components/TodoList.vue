@@ -4,8 +4,8 @@
     TodoItem(v-for="item in items" v-bind:key="item.label" v-bind:item="item" v-on:remove="remove(item)" v-on:check="check(item)")
   form.todo-form(v-on:submit.prevent)
     .todo-add
-      input(type="text" v-model="newItemLabel" placeholder="Write a new item")
-      button.btn.is-ghost.is-primary.is-sm(v-on:click="add") Add
+      input(type="text" v-model="newItemLabel" placeholder="Write a new item" v-on:keyup.enter="add(newItemLabel)")
+      //-button.btn.is-ghost.is-primary.is-sm(v-on:click="add(newItemLabel)") Add
 </template>
 
 <script>
