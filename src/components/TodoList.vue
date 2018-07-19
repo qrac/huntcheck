@@ -1,6 +1,6 @@
 <template lang="pug">
 .todo-box
-  ul.todo-list
+  draggable.todo-list(element="ul" :options="draggableOption" @end="move")
     TodoItem(v-for="item in items" :key="item.label" :item="item" @remove="remove(item)" @check="check(item)")
   form.todo-form(@submit.prevent)
     .todo-add
@@ -10,24 +10,29 @@
 
 <script>
 import store from "store"
+import draggable from "vuedraggable"
 import TodoItem from "./TodoItem.vue"
 
 const STORE_KEY = "TodoItems"
 
 export default {
-  components: { TodoItem },
+  components: {
+    draggable,
+    TodoItem
+  },
   data() {
     return {
       items: store.get(STORE_KEY) || [],
-      newItemLabel: ""
+      newItemLabel: "",
+      draggableOption: {
+        animation: 200,
+        delay: 50
+      }
     }
   },
   methods: {
-    save(){
-      store.set(STORE_KEY, this.items);
-    },
     add(){
-      this.items.push({ label: this.newItemLabel, done: false })
+      this.items.push({ label: this.newItemLabel, done: false });
       this.newItemLabel = "";
       this.save();
     },
@@ -36,6 +41,12 @@ export default {
       this.save();
     },
     check(item){
+      this.save();
+    },
+    save(){
+      store.set(STORE_KEY, this.items);
+    },
+    move(){
       this.save();
     }
   }

@@ -17,7 +17,8 @@
     "nuxt-sass-resources-loader": "^2.0.2",
     "sass-dashi": "^0.3.0",
     "shitajicss": "^4.6.0",
-    "store": "^2.0.12"
+    "store": "^2.0.12",
+    "vuedraggable": "^2.16.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",
