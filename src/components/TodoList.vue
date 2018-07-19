@@ -1,7 +1,7 @@
 <template lang="pug">
 .todo-box
-  draggable.todo-list(element="ul" :options="draggableOption" @end="onEnd")
-    TodoItem(v-for="item in items" :key="item.label" :item="item" @remove="remove(item)" @check="check(item)")
+  draggable.todo-list(element="ul" v-bind:options="draggableOption" v-on:end="onEnd")
+    TodoItem(v-for="item in items" v-bind:key="item.label" v-bind:item="item" v-on:remove="remove(item)" v-on:check="check(item)")
   form.todo-form(@submit.prevent)
     .todo-add
       input(type="text" v-model="newItemLabel" placeholder="Write a new item")

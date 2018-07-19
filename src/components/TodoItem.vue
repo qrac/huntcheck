@@ -1,7 +1,7 @@
 <template lang="pug">
-li.todo-list-item(:class="checkStyle")
-  label.item-label(:class="checkStyle")
-    input(type="checkbox" v-model="item.done" @change="$emit('check')")
+li.todo-list-item(v-bind:class="checkStyle")
+  label.item-label(v-bind:class="checkStyle")
+    input(type="checkbox" v-model="item.done" v-on:change="$emit('check')")
     span.text {{item.label}}
   button.btn.is-delete(@click="$emit('remove')") x
 </template>
