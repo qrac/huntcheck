@@ -1,6 +1,6 @@
 <template lang="pug">
 .todo-box
-  draggable.todo-list(element="ul" v-bind:options="draggableOption" v-on:end="onEnd")
+  draggable.todo-list(element="ul" v-bind:options="draggableOption" v-on:end="onEnd" v-model="items")
     TodoItem(v-for="item in items" v-bind:key="item.label" v-bind:item="item" v-on:remove="remove(item)" v-on:check="check(item)")
   form.todo-form(v-on:submit.prevent)
     .todo-add
@@ -50,10 +50,21 @@ export default {
       store.set(STORE_KEY, this.items);
     },
     onEnd: function(evt) {
-      console.log(evt);
-      store.each(function(value, key) {
-          console.log(key, '==', value)
-      })
+      //console.log(evt);
+      //store.each(function(value, key) {
+      //    console.log(key, '==', value)
+      //})
+      this.save();
+    }
+  },
+  computed: {
+    items: {
+      get() {
+        return this.$store.state.items
+      },
+      set(value) {
+        this.$store.commit('updateList', value)
+      }
     }
   }
 }
