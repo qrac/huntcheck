@@ -19,8 +19,28 @@ module.exports = {
     display: "standalone",
     icons: [
       {
-        sizes: "512x512",
-        src: "/apple-touch-icon.png",
+        src: "/splash/icon-128x128.png",
+        sizes: "128x128",
+        type: "image/png"
+      },
+      {
+        src: "/splash/icon-144x144.png",
+        sizes: "144x144",
+        type: "image/png"
+      },
+      {
+        src: "/splash/icon-152x152.png",
+        sizes: "152x152",
+        type: "image/png"
+      },
+      {
+        src: "/splash/icon-192x192.png",
+        sizes: "192x192",
+        type: "image/png"
+      },
+      {
+        src: "/splash/icon-256x256.png",
+        sizes: "256x256",
         type: "image/png"
       }
     ]
@@ -82,7 +102,49 @@ module.exports = {
         href: "https://fonts.googleapis.com/css?family=Slackey"
       },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-      { rel: "icon", type: "image/x-icon", href: "/favicon.png" }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
+      {
+        rel: "apple-touch-startup-image",
+        href: "/splash/launch-640x1136.png",
+        media:
+          "(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+      },
+      {
+        rel: "apple-touch-startup-image",
+        href: "/splash/launch-750x1334.png",
+        media:
+          "(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+      },
+      {
+        rel: "apple-touch-startup-image",
+        href: "/splash/launch-1242x2208.png",
+        media:
+          "(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+      },
+      {
+        rel: "apple-touch-startup-image",
+        href: "/splash/launch-1125x2436.png",
+        media:
+          "(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+      },
+      {
+        rel: "apple-touch-startup-image",
+        href: "/splash/launch-1536x2048.png",
+        media:
+          "(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)"
+      },
+      {
+        rel: "apple-touch-startup-image",
+        href: "/splash/launch-1668x2224.png",
+        media:
+          "(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)"
+      },
+      {
+        rel: "apple-touch-startup-image",
+        href: "/splash/launch-2048x2732.png",
+        media:
+          "(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)"
+      }
     ]
   },
   loading: { color: "#C96D18" },

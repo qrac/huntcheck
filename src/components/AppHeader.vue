@@ -3,7 +3,7 @@ header.header
   h1.title
     nuxt-link(to="/" aria-label="home")
       span Hunt Check
-  p.version v1.1.0
+  p.version v1.1.1
 </template>
 
 <style lang="scss" scoped>
