@@ -60,6 +60,10 @@ module.exports = {
           "width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
       },
       {
+        name: "apple-mobile-web-app-capable",
+        content: "yes"
+      },
+      {
         name: "description",
         content:
           "モンスターハンターワールドの素材・タスクメモなどに使うチェックリストWebアプリ",
